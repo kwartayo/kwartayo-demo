@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { LogOut, CheckCircle, XCircle, AlertCircle, Users, Home, Flag, BarChart3, Search } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
-import Loading from './loading';
 
 interface VerificationRequest {
   id: number;
@@ -453,8 +452,4 @@ export default function AdminDashboardPage() {
       </main>
     </div>
   );
-}
-
-export function Loading() {
-  return null;
 }

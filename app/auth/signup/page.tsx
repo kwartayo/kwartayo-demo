@@ -7,7 +7,6 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/context/AuthContext';
 import { User, Mail, Lock, Loader } from 'lucide-react';
-import Loading from './loading'; // Import the Loading component
 
 export default function SignupPage() {
   const router = useRouter();
@@ -71,7 +70,7 @@ export default function SignupPage() {
         </div>
 
         {/* Form */}
-        <Suspense fallback={<Loading />}> {/* Wrap the form in a Suspense boundary */}
+        <Suspense fallback={null}> {/* Wrap the form in a Suspense boundary */}
           <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-lg p-8">
             {error && (
               <div className="mb-6 p-4 bg-destructive/10 border border-destructive/20 rounded-lg text-destructive text-sm">
