@@ -7,7 +7,6 @@ import { useAuth } from '@/context/AuthContext';
 import Navigation from '@/components/Navigation';
 import { Search, Plus, MoreVertical, Trash2, Archive } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
-import Loading from './loading';
 
 interface Conversation {
   id: string;
@@ -41,7 +40,7 @@ export default function MessagesPage() {
   }, [user, router]);
 
   if (!user) {
-    return <Loading />;
+    return null;
   }
 
   // Mock conversations
